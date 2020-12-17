@@ -4,16 +4,42 @@ html
     meta(name="viewport". content='width=device-width. initial-scale=1.0')
     title= title
     
-    //Bootstrap CSS
     //link(rel="stylesheet", href="/stylesheets/bootstrap.min.css")
     link(rel="stylesheet", href="/stylesheets/bootstrap.css")
+    link(rel="stylesheet", href="/stylesheets/font-awesome.css")
+    link(rel="stylesheet", href="/stylesheets/dropdown.css")
     link(rel='stylesheet', href='/stylesheets/style.css')
 
   body
+    nav.navbar.navbar-expand-sm.bg-dark.navbar-dark.fixed-top.shadow
+      a.navbar-brand(href="#") ColourFur
+      ul.navbar-nav
+        li.nav-item
+          a.nav-link(href="#") 订单
+        li.nav-item
+          a.nav-link(href="#") 消息
+        li.nav-item
+          a.nav-link(href="#") 订阅
+        li.nav-item
+          a.nav-link(href="#") 收藏夹
+        .right
+          ul.nav.navbar-nav
+            li.dropdown
+              a.dropdown-toggle(href="#", data-toggle="dropdown" style="height:60px")
+                img.rounded-circle.img-fluid(src="/images/photo.jpg", alt="", width="32px", height="32px")
+                
+              .dropdown-menu.pull-left(style="backgroud:#fff; width:320px; overflow:hidden")
+                div(style="margin-top:16px; border-bottom:1px solid #eee")
+                  div(style="text-align:center")
+                    img.rounded-circle.img-fluid(src="/images/photo.jpg", style="width:38px; height:38px")
+                  div(style="color:#323534; text-align:center; line-height:36px; font-size:15px")
+                    span username
+                
+
     block content
 
-    //Bootstrap JS
     script(src="/javascripts/jquery.slim.min.js")
     script(src="/javascripts/popper.min.js")
     //script(src="/javascripts/bootstrap.min.js")
     script(src="/javascripts/bootstrap.js")
+    script(src="/javascripts/dropdown.js")
